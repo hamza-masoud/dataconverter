@@ -1,0 +1,111 @@
+{% extends "main_layout.html" %}
+{% block title %}about us{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm"
+             style="background-color: #6c63ff">
+            <img class="mr-3" src="/docs/4.4/assets/brand/bootstrap-outline.svg" alt="" width="48" height="48">
+            <div class="lh-100">
+                <h5 class="m-0 text-white lh-100">this page allows you to download files that contain global data like all the countries and their shortcut</h5>
+            </div>
+        </div>
+
+
+        <div class="my-3 p-3 bg-white rounded shadow-sm">
+            <h4 class="border-bottom border-gray pb-2 mb-0">Downloads</h4>
+            <div class="row pt-3 border-bottom mx-2">
+                <div class="col-3">
+                    <div class="row px-3">
+
+                        <img class="bd-placeholder-img mr-2 rounded" width="32" height="32"
+                             src="{{ url_for('static', filename="images/earth.png") }}" alt="">
+
+
+                        <p class="media-body pb-3 mb-0 small lh-125 border-gray">
+                            <strong class="d-block text-gray-dark">Countries</strong>
+                            List of all world countries
+                        </p></div>
+                </div>
+                <div class="col-9 btn-container">
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <a type="button" class="btn btn-primary"
+                           href="{{ config.app_url }}static-files/countries.csv">CSV</a>
+                    </div>
+                    {#                    <div class="btn-group" role="group" aria-label="Third group">#}
+                    {#                        <a type="button" class="btn btn-primary" href="">XML</a>#}
+                    {#                    </div>#}
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <a type="button" class="btn btn-primary"
+                           href="{{ config.app_url }}static-files/countries.xlsx" download="">EXCEL</a>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <a type="button" class="btn btn-primary"
+                           href="{{ config.app_url }}static-files/countries.json" download="">JSON</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-3 border-bottom mx-2">
+                <div class="col-3">
+                    <div class="row px-3">
+                        <img class="bd-placeholder-img mr-2 rounded" width="32" height="32"
+                             src="{{ url_for('static', filename="images/months icon.png") }}" alt="">
+
+                        <p class="media-body pb-3 mb-0 small lh-125 border-gray">
+                            <strong class="d-block text-gray-dark">months</strong>
+                            List of all world countries
+                        </p></div>
+                </div>
+
+                <div class="col-9 btn-container">
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <a type="button" class="btn btn-primary"
+                           href="{{ config.app_url }}static-files/months.csv">CSV</a>
+                    </div>
+                    {#                    <div class="btn-group" role="group" aria-label="Third group">#}
+                    {#                        <a type="button" class="btn btn-primary" href="">XML</a>#}
+                    {#                    </div>#}
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <a type="button" class="btn btn-primary"
+                           href="{{ config.app_url }}static-files/months.xlsx" download="">EXCEL</a>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <a type="button" class="btn btn-primary"
+                           href="{{ config.app_url }}static-files/months.json" download="">JSON</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-3 border-bottom mx-2">
+                <div class="col-3">
+                    <div class="row px-3">
+                        <img class="bd-placeholder-img mr-2 rounded" width="32" height="32"
+                             src="{{ url_for('static', filename="images/dollar_icon.png") }}" alt="">
+
+                        <p class="media-body pb-3 mb-0 small lh-125 border-gray">
+                            <strong class="d-block text-gray-dark">currency</strong>
+                            List of all world countries
+                        </p></div>
+                </div>
+
+                <div class="col-9 btn-container">
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <a type="button" class="btn btn-primary"
+                           href="{{ config.app_url }}static-files/currency.csv">CSV</a>
+                    </div>
+                    {#                    <div class="btn-group" role="group" aria-label="Third group">#}
+                    {#                        <a type="button" class="btn btn-primary" href="">XML</a>#}
+                    {#                    </div>#}
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <a type="button" class="btn btn-primary"
+                           href="{{ config.app_url }}static-files/currency.xlsx" download="">EXCEL</a>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <a type="button" class="btn btn-primary"
+                           href="{{ config.app_url }}static-files/currency.json" download="">JSON</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

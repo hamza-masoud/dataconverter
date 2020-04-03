@@ -1,0 +1,58 @@
+{% extends "main_layout.html" %}
+{% block title %}what is csv{% endblock %}
+{% block content %}{# pt-md-5 pb-md-4 p-3 mx-auto #}
+    <div class="container">
+        <div class="row auth__inner text-center container-text">
+            <div class="text-center col-8 mw-100 px-5">
+                <h1 class="display-4">What is CSV?</h1>
+                <p class="lead">
+                    CSV (Comma Separated Values) is a data format that was very popular in the past but is now
+                    Overwhelmed by more modern coding languages ​​like <a href="{{ config.app_url }}what-is-xml/"
+                                                                          class="link">XML</a> and <a
+                        href="{{ config.app_url }}what-is-json/" class="link">JSON</a>.
+                    In contrast to hierarchical data formats, the data in the CSV file form a two-dimensional structure
+                    in
+                    which similar data are available.
+                    Grouped with commas in each line of text that separate each data element.
+                    Our customers have several reasons to want to <a href="{{ config.app_url }}" class="link">convert
+                    JSON
+                    data to CSV data</a>. One of the most common The reasons for this are the easy way to display data
+                    in a
+                    table (e.g. Excel or Open)
+                    Office. Head office center). Most spreadsheet programs can easily open CSV files, which means that
+                    data
+                    can be saved by filtering, sorting, grouping, and designing.
+                    CSV files are also a useful format for importing data into or loading data into database tables
+                    Some older systems.
+                    We put a lot of effort into our JSON-CSV converter to be our customers
+                    Satisfied with the CSV edition.
+                </p>
+            </div>
+            <div class="col-4 w-75 mw-100">
+                <img src="{{ url_for('static', filename="images/csv-file-format.jpg" ) }}" alt="image csv"
+                     class="rounded mx-auto d-block">
+            </div>
+
+
+        </div>
+        <div class="left-align container">
+            <h3>here an example:</h3>
+            <div>
+                    <pre>Login email,Identifier,One-time password,Recovery code,First name,Last name,Department,Location
+rachel@example.com,9012,12se74,rb9012,Rachel,Booker,Sales,Manchester
+laura@example.com,2070,04ap67,lg2070,Laura,Grey,Depot,London
+craig@example.com,4081,30no86,cj4081,Craig,Johnson,Depot,London
+mary@example.com,9346,14ju73,mj9346,Mary,Jenkins,Engineering,Manchester
+jamie@example.com,5079,09ja61,js5079,Jamie,Smith,Engineering,Manchester</pre>
+            </div>
+        </div>
+        <br><br>
+
+
+        <div class="card-deck mb-3 text-center">
+            {% include "partials/json-card.html" %}
+            {% include "partials/xml-card.html" %}
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "main_layout.html" %}
+{% block title %}404 error{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="card border-0 shadow my-5">
+            <div class="card-body p-5">
+                <h1 class="font-weight-light">oops!....there is an error in your request please try again :(</h1><br>
+                <h3 class="font-weight-light"><a href={{ config.app_url }}> click here to go to the main page</a></h3>
+                <br>
+                <p class="lead">hello there, you get false request in this website maybe you enter an false url or you
+                    want
+                    to download a file that have been converted last time and <b class="h5">your file does not exist</b>
+                </p>
+                <p class="lead">sorry about that, you can reconvert you file from <a href="{{ config.app_url }}error/" class="link">main page</a></p>
+                <div class="alert alert-danger">{{ error_text }}</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

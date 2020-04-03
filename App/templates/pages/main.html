@@ -1,0 +1,64 @@
+{% extends  "main_layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+
+    {% include 'partials/json-input-form.html' %}
+
+
+    <div class="hero__sub">
+		    <span id="scrollToNext" class="scroll">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                     y="0px" class='hero__sub__down' fill="currentColor" width="512px" height="512px"
+                     viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3z"></path></svg>
+            </span>
+    </div>
+    <div class="steps landing__section">
+        <div class="container">
+            <h2>Upload you file we will convert it, and take care of your Data</h2>
+            <p>Here's who we can think of, but surely creative people will surprise us.</p>
+        </div>
+
+        <div class="container">
+            <div class="steps__inner">
+                <div class="step">
+                    <div class="step__media">
+                        <img src="{{ url_for('static', filename="images/undraw_designer.svg" ) }}" class="step__image"
+                             alt="">
+                    </div>
+                    <h4>Security</h4>
+                    <p class="step__text">We keep your data confidential</p>
+                </div>
+                <div class="step">
+                    <div class="step__media">
+                        <img src="{{ url_for('static', filename="images/undraw_responsive.svg" ) }}" class="step__image"
+                             alt="">
+                    </div>
+                    <h4>carefully</h4>
+                    <p class="step__text">We handle your data carefully.</p>
+                </div>
+                <div class="step">
+                    <div class="step__media">
+                        <img src="{{ url_for('static', filename="images/undraw_creation.svg" ) }}" class="step__image"
+                             alt="">
+                    </div>
+                    <h4>Rapidly</h4>
+                    <p class="step__text">We handle your data rapidly .</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="hero__sub"></div>
+    <div class="container">
+        <div class="card-deck mb-3 text-center">
+            {% include "partials/csv-card.html" %}
+            {% include "partials/json-card.html" %}
+            {% include "partials/xml-card.html" %}
+        </div>
+    </div>
+{% endblock %}

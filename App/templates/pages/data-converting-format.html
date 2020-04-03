@@ -1,0 +1,29 @@
+{% extends "main_layout.html" %}
+{% block title %}about us{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4">What is Data Conversion?</h1>
+            <p class="lead">
+                <a href="{{ config.app_url }}" class="link">Data Conversion</a> is the process by which
+                data is converted from one
+                data format to another one while retaining its readability. The process involves extracting data from
+                one source with one type of formatting to another required type. For example, <a
+                    href="{{ config.app_url }}what-is-json/" class="link">JSON</a> data can be converted
+                to <a
+                    href="{{ config.app_url }}what-is-csv/" class="link">CSV</a> format from file or
+                Text. We at <a href="{{ config.app_url }}" class="link">dataconverter.website</a>
+                offer this portal as service to convert data
+                from JSON file or text data format to CSV data format. We also offer a service to convert big files or
+                complete database. Please feel free to <a href="{{ config.app_url }}contact/"
+                                                          class="link">contact us</a> to get help
+            </p>
+
+        </div>
+        <div class="card-deck mb-3 text-center">
+            {% include "partials/csv-card.html" %}
+            {% include "partials/json-card.html" %}
+            {% include "partials/xml-card.html" %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "main_layout.html" %}
+{% block title %}what is json{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row auth__inner text-center container-text">
+            <div class="text-center col-8 mw-100 px-5">
+                <h1 class="display-4">What is JSON?</h1>
+                <p class="lead">
+                    JSON (Javascript Objection) is a machine-readable data storage format that can include the following
+                    Hierarchical information.
+                    Its purpose is compared to <a href="{{ config.app_url }}what-is-xml/" class="link">XML</a>, but JSON
+                    takes up less and less readable space.
+                    Then the most traditional XML specification.
+                    The JSON notation is very similar to the structure of the JavaScript arithmetic language.
+                    Readiness It consists of the pairs of nominal values that exist within the parent-child
+                    relationship.
+                    JSON accreditation is growing rapidly and is used by a growing number of websites
+                    Global <a href="https://en.wikipedia.org/wiki/Ajax_(programming)" class="link">AJAX</a> (a common
+                    method of communicating between sites and servers) often uses JSON
+                </p>
+            </div>
+            <div class="col-4 w-75 mw-100">
+                <img src="{{ url_for('static', filename="images/json-file-format.jpg" ) }}" alt="image csv"
+                     class="rounded mx-auto d-block img rounded mx-auto d-block">
+            </div>
+
+        </div>
+    </div>
+    <div class="left-align container">
+        <h3>here an example:</h3>
+
+        <pre><xmp>{"widget": {
+    "debug": "on",
+    "window": {
+        "title": "Sample Konfabulator Widget",
+        "name": "main_window",
+        "width": 500,
+        "height": 500
+    },
+    "image": {
+        "src": "Images/Sun.png",
+        "name": "sun1",
+        "hOffset": 250,
+        "vOffset": 250,
+        "alignment": "center"
+    },
+    "text": {
+        "data": "Click Here",
+        "size": 36,
+        "style": "bold",
+        "name": "text1",
+        "hOffset": 250,
+        "vOffset": 100,
+        "alignment": "center",
+        "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
+    }
+}}</xmp></pre>
+        <br><br>
+        <div class="card-deck mb-3 text-center">
+            {% include "partials/csv-card.html" %}
+            {% include "partials/xml-card.html" %}
+        </div>
+
+    </div>
+{% endblock %}

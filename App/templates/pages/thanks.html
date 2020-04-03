@@ -1,0 +1,21 @@
+{% extends "main_layout.html" %}
+{% block title %}about us{% endblock %}
+{% block content %}
+    <div class="container" xmlns="http://www.w3.org/1999/html">
+        <p class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            {% if message == '' %}
+                <div class="text-center">
+                    <h1 class="display-4">thanks for your message</h1>
+                <p class="lead">
+                    hello {{ name }}, thanks you to contact us, we will contact with you soon.
+                    {% if error %}
+                        <div class="alert alert-warning">but you have sent the same message already! k thanks.</div>
+                    {% endif %}
+                </div>
+            {% elif message != '' %}
+                <h1 class="display-4 text-center">oops!... sorry there is error</h1>
+                <div class="alert alert-danger text-center">{{ message }}.</div>
+
+            {% endif %}
+
+{% endblock %}

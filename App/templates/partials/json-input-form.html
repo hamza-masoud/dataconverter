@@ -1,0 +1,43 @@
+<div class="hero">
+    <div class="hero__overlay hero__overlay--gradient"></div>
+    <div class="hero__mask"></div>
+    <div class="hero__inner">
+        <div class="container">
+            <div class="auth__inner pt-4">
+                <div class="auth__media">
+                    <img src="{{ url_for('static', filename="images/undraw_selfie.svg" ) }}" alt="">
+                </div>
+                <div class="auth__auth">
+                    <h1 class="auth__title">Data type Converter</h1>
+                    <p>Use this form to upload your file we will convert it into JSON into CSV (Comma Separated Values)
+                        for Excel</p>
+                    <form action="{{ config.app_url }}result/" enctype="multipart/form-data" method='POST'>
+                        <div class="input-group mb-3">
+                            <div class="custom-file">
+                                <input name="json_file" type="file" class="custom-file-input" id="customFile" required>
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
+                            <div class="input-group-append">
+                                <button class="btn btn-dark" type="submit">Convert</button>
+                            </div>
+                        </div>
+                        <input type="hidden" name="input_type" value="file">
+
+                    </form>
+
+                    <form action="{{ config.app_url }}result/" autocomplete="new-password" class="form"
+                          enctype="multipart/form-data"
+                          method='POST' role="presentation">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1"></label>
+                            <textarea name="json_text" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                      placeholder="or Paste your JSON text here" required></textarea>
+                        </div>
+                        <input type="hidden" name="input_type" value="txt">
+                        <button type="submit" class="button button__accent">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
